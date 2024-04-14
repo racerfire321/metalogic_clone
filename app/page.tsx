@@ -1,7 +1,11 @@
 import Image from "next/image";
-
+import Hero from "@/components/home/Hero";
 export default function Home() {
   return (
-    <h1>hello</h1>
+    <div className="container mx-auto px-4">
+      <Hero/>
+
+      
+    </div>
   );
 }
