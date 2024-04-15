@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-[1000] w-full bg-blue-950 text-white border-b border-translucent-light-100 px-8 py-3 lg:flex lg:justify-between lg:items-center">
+    <nav className="sticky top-0 z-[1000] w-full bg-blue-950 text-white border-b border-translucent-light-100 px-8 py-3 lg:flex lg:justify-between lg:items-center">
       <div className="flex items-center justify-between w-full lg:w-auto">
         <Link href="/">
           <span className="flex items-center gap-4">

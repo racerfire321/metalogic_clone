@@ -15,6 +15,10 @@ const config: Config = {
       },
       gridTemplateRows: {
         'layout': 'auto 1fr auto',
+      },
+      fontFamily:{
+        poppins:'var(--poppins)',
+        inter:'var(--inter)'
       }
     },
   },

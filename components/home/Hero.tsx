@@ -6,7 +6,7 @@ const Hero = () => {
     <div className=" text-center text-black">
       <div >
         <div>
-          <h2 className="mb-8 text-4xl font-semibold lg:text-6xl">Transforming Today <br />For <br /> Digital Tomorrow</h2>
+          <h2 className="mb-8 text-4xl font-semibold lg:text-6xl ">Transforming Today <br />For <br /> Digital Tomorrow</h2>
           <p className="w-[90vw] font-semibold lg:w-full">We are committed to offering state-of-the-art software solutions that <br />enable companies to prosper in the digital world.</p>
         </div>
       </div>
