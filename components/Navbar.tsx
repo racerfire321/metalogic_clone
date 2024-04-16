@@ -21,11 +21,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-[1000] w-full bg-blue-950 text-white border-b border-translucent-light-100 px-8 py-3 lg:flex lg:justify-between lg:items-center">
+    <nav className="sticky top-0 z-[1000] w-full text-white border-b border-translucent-light-100 px-8 py-3 lg:flex lg:justify-between lg:items-center" style={{ backgroundImage: 'url(/herobg.svg)'}}>
       <div className="flex items-center justify-between w-full lg:w-auto">
         <Link href="/">
           <span className="flex items-center gap-4">
-            <Image src="/metalogo.png" alt="metalogic comany logo" width={48} height={48} />
+            <Image src="/metalogo.png" alt="metalogic comapany logo" width={48} height={48} />
             <div className="flex flex-col">
               <h1 className="flex text-3xl font-semibold tracking-widest">
                 <span>Meta</span>

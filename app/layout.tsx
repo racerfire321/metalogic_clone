@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const poppin = Poppins({subsets:["latin"], weight:['400','900']})
+
 
 export const metadata: Metadata = {
   title: "MetaLogic Software Pvt.Ltd.",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${poppin.className}`}>
+      <body className={`${inter.className}`}>
         <div className="h-full grid grid-rows-layout">
         <Navbar/>
         {children}

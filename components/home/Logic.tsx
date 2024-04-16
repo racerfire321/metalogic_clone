@@ -1,12 +1,12 @@
 import React from 'react';
 
-
 const Logic = () => {
   return (
     <div className="relative bg-blue-950 py-32">
-      <div className="p-3 md:container">
-        <div className="rounded-xl border border-translucent-light-300 bg-translucent-light-100 p-4 text-white backdrop-blur md:p-8 lg:mx-auto lg:w-[80%]">
-          <div>
+      <div className="p-3 md:container items-center align-middle">
+        <div className="rounded-xl border border-translucent-light-300 bg-translucent-light-100 p-4 text-white backdrop-blur md:p-8 lg:mx-auto lg:w-[80%]" style={{ opacity: '1' }}>
+          <div style={{ opacity: '1' }}>
+
             <h1 className="mb-8 text-2xl font-bold md:text-4xl">Why MetaLogic <span className="text-red-500">?</span></h1>
             <p className="w-[80%]">Innovation is our driving force. We explore the latest tech trends to deliver groundbreaking solutions that keep you ahead.</p>
           </div>
@@ -47,8 +47,8 @@ const Logic = () => {
               </svg>
             </div>
             <div>
-              <div>
-                <div className="flex flex-col gap-8">
+              <div className='mt-4'>
+                <div className="flex flex-col gap-9">
                   <div>
                     <div className="flex flex-col">
                       <span className="text-xl font-semibold">Innovation at the Core</span>
