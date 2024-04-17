@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
     <StatsCard/>
-    <footer className="w-full bg-herobg px-4 pb-8 pt-24 text-white bg-blue-800 md:px-16" style={{ backgroundImage: 'url(/herobg.svg)'}}>
+    <footer className="w-full bg-herobg px-4 pb-8 pt-24 mt-3 text-white bg-blue-800 md:px-16" style={{ backgroundImage: 'url(/herobg.svg)'}}>
       
       <div className="flex flex-col justify-between gap-y-8 xl:flex-row">
         <div className="flex flex-col items-start gap-4 md:flex-row lg:gap-2">

@@ -7,15 +7,21 @@ import React, { useState, useRef, forwardRef, MutableRefObject, useEffect } from
 const ProductExplorer = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
-  const images = ['slider/chart.svg', 'slider/contribution.svg','slider/idcard.svg'];
+  const [transitionStarted, setTransitionStarted] = useState(false); 
+  const images = ['slider/chart.svg', 'slider/contribution.svg', 'slider/idcard.svg'];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    }, 10000);
+    const autoplay = setInterval(() => {
+      setImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+      setTransitionStarted(true); 
+    }, 3000); 
 
-    return () => clearInterval(interval);
+    setTimeout(() => {
+      setTransitionStarted(true);
+    }, 4000);
+    return () => clearInterval(autoplay);
   }, []);
+
 
   return (
     <div className="relative w-full  bg-left-bottom bg-no-repeat  bg-bg-image">
@@ -92,17 +98,17 @@ const ProductExplorer = () => {
                               <div className="rounded-xl border bg-card text-card-foreground shadow my-4 grid md:grid-cols-2">
                                 <div className="relative flex items-center justify-center rounded-xl bg-gradient-to-r from-green-400 to-green-100 pb-10 lg:rounded-r-none">
                                   <div className="relative overflow-hidden">
-                                  
-                             <img
-                              className={`w-[250px] p-8`}
+                                  <img
+                              className="w-[250px] p-8"
                               style={{
-                                transition: 'transform 0.9s ease',
+                                transition: ' 1s ease', // Adjust transition duration here
                                 transform: `translateX(-${imageIndex * 100}%)`,
-                                flexShrink: 0
+                                
                               }}
                               src={images[imageIndex]}
                               alt="Slide"
                             />
+                             
                                 
                 
             
@@ -130,7 +136,7 @@ const ProductExplorer = () => {
                                 <li>Manage and learn about events nearby you.</li>
                               </ul>
                               <div className="flex self-center px-8 pb-3 pt-10 lg:self-end">
-                                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border bg-transparent shadow-sm h-9 px-4 py-2 border-secondary-300 text-secondary-300 transition-all duration-500 hover:bg-secondary-300 hover:text-white">
+                                <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 border bg-transparent shadow-sm h-9 px-4 py-2 border-red-500 text-red-500 transition-all duration-500 hover:bg-red-500 hover:text-white">
                                   <a
                                     aria-label="Learn more about our digital banshwali"
                                     className="flex items-center gap-2 "
@@ -173,15 +179,16 @@ const ProductExplorer = () => {
                                 <div className="relative flex items-center justify-center rounded-xl bg-gradient-to-r from-green-400 to-green-100 pb-10 lg:rounded-r-none">
                                   <div className="relative overflow-hidden">
                                   <img
-                              className={`w-[250px] p-8`}
+                              className="w-[250px] p-8"
                               style={{
-                                transition: 'transform 0.9s ease',
+                                transition: 'transform 1s ease', 
                                 transform: `translateX(-${imageIndex * 100}%)`,
-                                flexShrink: 0
+                                
                               }}
                               src={images[imageIndex]}
                               alt="Slide"
                             />
+                             
                                   </div>
                                   <h1 className="absolute bottom-0 hidden p-4 text-ui-500 md:block">
                                   Where Finances unify for business and personal success

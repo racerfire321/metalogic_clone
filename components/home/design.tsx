@@ -147,24 +147,46 @@ const Design = () => {
         </ul>
       </div>
       <div className="hidden 2xl:container md:block">
-        {/* Add your content here */}
+        
       </div>
    
 
-      <div className="hidden 2xl:container md:block">
+      <div className="hidden 2xl:container md:block relative">
       
      
         <SnakeTimeline 
         />
-         
-    <div>
-    <div style={{ transform: 'rotate(270deg)' , fontSize: '5rem' }} className="w-23 h-3" >
-        <FaLocationDot width={600} height={100} style={{ fill: 'url(#paint15_linear_197_4363)', fontSize: '3rem' }} />
-    </div>
-    </div>    
-  
-      </div>
-    </section>
+         <div className="container text-xl">
+    <div className="absolute max-w-[350px] p-2 top-[7%] right-[7%]">
+        <p>Let's brainstorm together and explore creative ideas to solve
+                your unique challenges.</p> 
+    </div>   
+    
+    <div className="absolute max-w-[350px] p-2 top-[44%] right-[7%]">
+        <p>Our skilled designer will craft visually stunning interface design</p> 
+    </div> 
+
+    <div className="absolute max-w-[350px] p-2 bottom-[7%] right-[7%]">
+        <p>Let's brainstorm together and explore creative ideas to solve
+                your unique challenges.</p> 
+    </div> 
+</div>
+
+<div className="container text-xl  ">
+      
+    
+    <div className="absolute max-w-[350px] p-2 top-[25%] left-[10%]">
+        <p>Our expert designer will turned your approved design into robust and scalable software</p> 
+    </div> 
+
+    <div className="absolute max-w-[350px] p-2 bottom-[28%] left-[10%]">
+        <p>Our skilled designer will craft visually stunning interface design</p> 
+    </div> 
+</div>
+</div>
+</section>
+
+
   );
 };
 

@@ -1,5 +1,7 @@
 'use client'
+import { motion } from 'framer-motion';
 import React, { useRef, useState, useEffect } from 'react';
+import { IoInformationCircle } from 'react-icons/io5';
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -148,7 +150,7 @@ const Hero = () => {
 
   return (
     <div
-      className="relative justify-center items-center h-screen overflow-hidden bg-center bg-cover"
+      className="top-0 left-0 w-full  h-screen flex justify-center items-center overflow-hidden bg-center bg-cover"
       style={{ backgroundImage: 'url(/herobg.svg)' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -161,7 +163,10 @@ const Hero = () => {
           height={canvasSize.height}
         />
       )}
-      <div className="text-center mt-6 text-white">
+      <IoInformationCircle className='absolute top-[13%] right-[4%] text-white' style={{ fontSize: '3rem' }} />
+
+      <div className="text-center mt-6 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <motion.div initial={{ y: 400 }} animate={{ y: -30 }} transition={{ type: 'tween', duration: 0.4}}>
         <div>
           <h2 className="mb-8 text-4xl font-semibold lg:text-6xl">
             Transforming <br />
@@ -173,8 +178,9 @@ const Hero = () => {
             enable companies to prosper in the digital world.
           </p>
         </div>
+        </motion.div>
         <div className="flex justify-center pt-10" style={{ opacity: 1, transform: 'none' }}>
-          <a className="group flex gap-2 rounded-lg bg-slate-700 px-8 py-3 transition-all duration-500 hover:bg-secondary-300 hover:bg-red-500" aria-label="go to about page" href="/about">
+          <a className="group flex gap-2 rounded-lg bg-black/30  px-8 py-3 hover:bg-secondary-300 transition-all duration-500 hover:bg-red-500" aria-label="go to about page" href="/about">
             Learn More
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right transition-all duration-500 group-hover:translate-x-2">
               <path d="M5 12h14"></path>

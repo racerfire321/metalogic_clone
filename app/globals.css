@@ -23,7 +23,7 @@ body,html{
   stroke-dasharray: 10;
   stroke-dashoffset: 10;
   transition: stroke-dashoffset 8s ease-in-out;
-  visibility: hidden; /* Hide the path initially */
+  visibility: hidden; 
 }
 
 .visible .dashed_path {
@@ -31,5 +31,7 @@ body,html{
 }
 
 .join-dots {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
   animation: joinDotsAnimation 1s forwards;
 }

@@ -35,7 +35,7 @@ const StatsCard = () => {
     <section id="stats-card" className='w-full translate-y-28 transform 2xl:container md:translate-y-14'>
       <div className="mx-4 -mb-10 z-50 flex flex-col justify-between gap-4 rounded-xl border bg-white text-black p-4 font-semibold text-accent-teal shadow-lg shadow-translucent-dark-200 sm:flex-row md:mx-auto md:w-[80%] md:px-16 xl:w-[50%]">
         <div className="flex flex-col gap-4">
-          <CountUp start={countStarted ? 0 : undefined} end={381} duration={3} separator="," decimals={0} className={`text-7xl md:h-[80px] ${countStarted ? 'count-up' : ''}`} />
+          <CountUp start={countStarted ? 0 : undefined} end={313} duration={3} separator="," decimals={0} className={`text-7xl md:h-[80px] ${countStarted ? 'count-up' : ''}`} />
           <span>Kilometers of code written</span>
         </div>
         <div className="flex flex-col gap-4">

@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="h-full grid grid-rows-layout">
+        <div className="h-full ">
         <Navbar/>
         {children}
         <Footer/>

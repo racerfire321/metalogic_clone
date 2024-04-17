@@ -112,7 +112,7 @@ const ServiceSection = () => {
         </div>
         <a
           aria-label="services that metalogic software provides"
-          className="flex w-fit gap-2 rounded-lg border border-secondary-300 px-3 py-2 text-secondary-300 transition-all duration-500 hover:bg-secondary-300 hover:text-white"
+          className="flex w-fit gap-2 rounded-lg border border-secondary-300 px-3 py-2 text-secondary-300  bg-transparent shadow-sm  border-red-500 text-red-500 transition-all duration-500 hover:bg-red-500 hover:text-white"
           href="/services"
         >
           Learn More
