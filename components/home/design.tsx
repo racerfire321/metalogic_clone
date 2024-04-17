@@ -38,7 +38,7 @@ const Design = () => {
                 </h3>
               </div>
               <div className="p-6 pt-0">
-                Let's brainstorm together and explore creative ideas to solve
+                Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.
               </div>
             </div>
@@ -63,7 +63,7 @@ const Design = () => {
                 </h3>
               </div>
               <div className="p-6 pt-0">
-                Let's brainstorm together and explore creative ideas to solve
+                Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.
               </div>
             </div>
@@ -89,7 +89,7 @@ const Design = () => {
                 </h3>
               </div>
               <div className="p-6 pt-0">
-                Let's brainstorm together and explore creative ideas to solve
+                Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.
               </div>
             </div>
@@ -114,7 +114,7 @@ const Design = () => {
                 </h3>
               </div>
               <div className="p-6 pt-0">
-                Let's brainstorm together and explore creative ideas to solve
+                Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.
               </div>
             </div>
@@ -139,7 +139,7 @@ const Design = () => {
                 </h3>
               </div>
               <div className="p-6 pt-0">
-                Let's brainstorm together and explore creative ideas to solve
+                Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.
               </div>
             </div>
@@ -158,7 +158,7 @@ const Design = () => {
         />
          <div className="container text-xl">
     <div className="absolute max-w-[350px] p-2 top-[7%] right-[7%]">
-        <p>Let's brainstorm together and explore creative ideas to solve
+        <p>Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.</p> 
     </div>   
     
@@ -167,7 +167,7 @@ const Design = () => {
     </div> 
 
     <div className="absolute max-w-[350px] p-2 bottom-[7%] right-[7%]">
-        <p>Let's brainstorm together and explore creative ideas to solve
+        <p>Let&apos;s brainstorm together and explore creative ideas to solve
                 your unique challenges.</p> 
     </div> 
 </div>

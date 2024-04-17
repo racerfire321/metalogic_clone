@@ -88,11 +88,11 @@ const ServiceSection = () => {
                         </div>
                         <div className='px-2'>
                             <div className='pb-4 text-xl font-semibold'>Internship/<br/>Training</div>
-                            <div className='px-4 text-sm'>Our training programs and workshops cover a range of topics, from software utilization to design principles, enhancing your team's skills and productivity.</div>
+                            <div className='px-4 text-sm'>Our training programs and workshops cover a range of topics, from software utilization to design principles, enhancing your team&apos;s skills and productivity.</div>
                         </div>
                     </div>
                     <div className='absolute w-[100%] h-[100%] bg-white border-[2px] border-red-400 rounded-xl shadow-lg flex flex-col items-center justify-center text-center' style={{ backfaceVisibility: 'hidden', transform:'rotateY(180deg)' }}>
-                      <div className='p-2'>Explore our comprehensive training programs and workshops, spanning software utilization to design principles, elevating your team's skills and productivity.</div>
+                      <div className='p-2'>Explore our comprehensive training programs and workshops, spanning software utilization to design principles, elevating your teams skills and productivity.</div>
                       <Link href={'/#'} className='text-blue-600 underline underline-offset-4'>See More</Link></div>
                   </div>
                 </div>
