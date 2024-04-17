@@ -54,7 +54,7 @@ While I have made every effort to recreate the Home page with fidelity to the or
 
 👤 **Bitisha Maharjan**
 
-- Project GitHub: [racerfire321](https://github.com/your-username)
+- Project GitHub: [racerfire321](https://github.com/racerfire321)
 - Link: [ Vercel](https://metalogicHomeclone.vercel.app)
 - Portfolio: [bitishamaharjan](https://bitishamaharjan.vercel.app)
 
