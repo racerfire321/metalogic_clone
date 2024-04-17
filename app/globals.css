@@ -5,3 +5,31 @@
 body,html{
   height: 100%;
 }
+
+
+.single-card:hover {
+  transform: rotateY(180deg);
+}
+@keyframes joinDotsAnimation {
+  from {
+    stroke-dashoffset: 10;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.dashed_path {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+  transition: stroke-dashoffset 8s ease-in-out;
+  visibility: hidden; /* Hide the path initially */
+}
+
+.visible .dashed_path {
+  visibility: visible; /* Show the path when the parent has the 'visible' class */
+}
+
+.join-dots {
+  animation: joinDotsAnimation 1s forwards;
+}

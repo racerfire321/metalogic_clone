@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import {motion} from 'framer-motion'
+import { IoInformationCircle } from "react-icons/io5";
 
 const navItems = [
   { text: 'Home', href: '/' },
@@ -20,8 +22,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  return (
-    <nav className="sticky top-0 z-[1000] w-full text-white border-b border-translucent-light-100 px-8 py-3 lg:flex lg:justify-between lg:items-center" style={{ backgroundImage: 'url(/herobg.svg)'}}>
+  return  (
+    <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{ type: 'tween', duration: 0.5 }}>
+
+    <nav className="sticky top-0 transition-all z-[1000] w-full text-white  border-translucent-light-100 px-8 py-3 lg:flex lg:justify-between lg:items-center" style={{ backgroundImage: 'url(/herobg.svg)'}}>
       <div className="flex items-center justify-between w-full lg:w-auto">
         <Link href="/">
           <span className="flex items-center gap-4">
@@ -44,7 +48,7 @@ const Navbar = () => {
       </div>
       <ul className={`lg:flex lg:gap-8 lg:font-semibold ${isOpen ? 'block' : 'hidden'}`}>
         {navItems.map((item, index) => (
-          <li key={index}  className={`relative pb-1 ${path === item.href ? ' ' : 'hover:border-b-2 border-red-600'}`}>
+          <li key={index}  className={`relative pb-1 ${path === item.href ? ' ' : 'hover:border-b-0.5 border-red-600'}`}>
             <Link href={item.href}>
               <span className={`relative pb-1 ${path === item.href ? 'text-white-600 border-b-2 border-red-600' : ''}`} >
                 {item.text}
@@ -53,14 +57,20 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+   
+
+      <Link href='/contact'> <IoInformationCircle className=' left-9 justify-items-end' style={{ fontSize : '3rem'}}/></Link>
+      
       <div>
-        <button className="inline-flex bg-red-600 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 bg-secondary-400 text-white hover:border-secondary-400">
+       
+        <button className="inline-flex bg-red-600 items-center justify-center whitespace-nowrap rounded-md text-md font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 bg-secondary-400 text-white hover:border-secondary-400">
           <Link href="/contact">
             Get in Touch
           </Link>
         </button>
       </div>
     </nav>
+    </motion.div>
   );
 };
 

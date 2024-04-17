@@ -1,19 +1,40 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useRef, useState } from 'react';
 
 const Logic = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = sectionRef.current;
+      if (section) {
+        const top = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        setIsVisible(top < windowHeight * 0.75);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call initially to set the initial visibility
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="relative bg-blue-950 py-32">
+    <div ref={sectionRef} className="relative bg-blue-950 py-32">
       <div className="p-3 md:container items-center align-middle">
         <div className="rounded-xl border border-translucent-light-300 bg-translucent-light-100 p-4 text-white backdrop-blur md:p-8 lg:mx-auto lg:w-[80%]" style={{ opacity: '1' }}>
           <div style={{ opacity: '1' }}>
-
             <h1 className="mb-8 text-2xl font-bold md:text-4xl">Why MetaLogic <span className="text-red-500">?</span></h1>
             <p className="w-[80%]">Innovation is our driving force. We explore the latest tech trends to deliver groundbreaking solutions that keep you ahead.</p>
           </div>
           <div className="flex gap-4 pt-4 md:px-[10%] md:pr-[10%]">
-            <div className="hidden md:block">
+            <div className="hidden md:block visible"> {/* Add 'visible' class to reveal the SVG path */}
               <svg width="65" height="384" viewBox="0 0 65 384" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="dots" d="M30 32L30 383" stroke="#999999" strokeWidth="2" strokeLinecap="round" strokeDasharray="7 7" className="dashed_path" />
+                <path id="dots" d="M30 32L30 383" stroke="#999999" strokeWidth="2" strokeLinecap="round" className={`dashed_path ${isVisible ? 'join-dots' : ''}`} />
+              
                 <rect x="29" y="23" width="2" height="70" rx="1" fill="url(#paint0_linear_1_10894)" />
                 <g filter="url(#filter0_di_1_10894)">
                   <circle cx="30.5" cy="29.5" r="18.5" fill="url(#paint1_linear_1_10894)" />
