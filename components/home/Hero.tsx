@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import React, { useRef, useState, useEffect } from 'react';
 import { IoInformationCircle } from 'react-icons/io5';
 
@@ -163,7 +164,7 @@ const Hero = () => {
           height={canvasSize.height}
         />
       )}
-      <IoInformationCircle className='absolute top-[13%] right-[4%] text-white' style={{ fontSize: '3rem' }} />
+      <Link href='/i.pdf'><IoInformationCircle className='absolute top-[13%] right-[4%] text-white' style={{ fontSize: '3rem' }} /></Link>
 
       <div className="text-center mt-6 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <motion.div initial={{ y: 400 }} animate={{ y: -30 }} transition={{ type: 'tween', duration: 0.4}}>
